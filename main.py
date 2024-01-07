@@ -43,6 +43,8 @@ while max_life > 0:
         occurrences = find_indexes(random_word, letter)
         blank_word = replace_letter(blank_word, letter, occurrences)
         if "_" not in blank_word:
+            hangman_art.display_logo()
+            hangman_art.display_life(max_life)
             print(' '.join(map(str, blank_word)))
             print("Congrats, you guess it right.")
             print("  0   ")
